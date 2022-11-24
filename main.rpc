@@ -1,0 +1,40 @@
+@#{<stdlib>}#@
+
+<<<(
+
+    ( Multi line comment)
+
+    The Module below is a example of RPC's odd and weird structure using Tree's and Nodes
+    Instead of classes and Modules RPC uses Trees and nodes within that tree. Every tree must
+    have at least one node. Inside of a node must be functions that are called. 
+
+    Functions start at `VOID => RPCMAIN() {}`
+
+)>>>
+
+RPC Tree Structure (Treename) {
+    RPC>*NODE | Interface{} - (Arg | OutputStatement) INIT [
+        \/
+            RPCO INIT {{{
+                (
+                    ----> RPCOUTPUT << PREPARE(Arg)
+                    .> RPCOUTPUT
+                )
+            }}}
+        /\
+    ]
+}
+
+
+Variable Name : String = "Bob"
+Variable Age  : Integer = 20
+
+String : Integer => CompareAndReturn(person, personage) -> Boolean {
+        <-cmp(person, personage)
+}
+
+VOID : Main() {
+    Treename::OutputStatement(CompareAndReturn(Name, Age))
+}
+
+
